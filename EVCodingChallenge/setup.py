@@ -8,6 +8,7 @@ setup(
     include_package_data=True,
     zip_safe=False,
     install_requires=[
-      'flask==2.0.1'
+      'flask==2.0.1',
+      'cryptography'
     ],
 )
