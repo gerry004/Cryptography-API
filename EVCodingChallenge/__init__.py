@@ -1,8 +1,7 @@
-import os, json
+import os
 from flask import Flask
 from EVCodingChallenge import endpoints
 from cryptography.fernet import Fernet
-from hashlib import sha256
 
 def create_app():
 
