@@ -17,7 +17,7 @@ def encrypt():
 @bp.route('decrypt', methods=('POST',))
 def decrypt():
     data = request.get_json()
-    decrypted_data = decrypt_json(data, "gAAAAABhq")
+    decrypted_data = decrypt_json(data, "gAAAAA")
     
     return jsonify(decrypted_data), 200
 
@@ -26,7 +26,7 @@ def sign():
     data = request.get_json()
     signed_data = {}
 
-    signed_data['data'] = decrypt_json(data, "gAAAAABhq")
+    signed_data['data'] = decrypt_json(data, "gAAAAA")
     standardized_json = standardize_json(data)
     signed_data["signature"] = compute_signature(standardized_json)
 
@@ -36,7 +36,7 @@ def sign():
 def verify():
     data = request.get_json()
 
-    decrypted_data = decrypt_json(data['data'], "gAAAAABhq")
+    decrypted_data = decrypt_json(data['data'], "gAAAAA")
     standardized_json = standardize_json(decrypted_data)
 
     signature = compute_signature(standardized_json)

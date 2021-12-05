@@ -16,7 +16,7 @@ flask run
 ## Making Requests to Endpoints Using Curl in Bash Terminal
 In the form:
 
-curl localhost:5000/endpoint-name -d '{ "json": "data" } -H 'Content-Type: application/json'
+curl localhost:5000/endpoint-name -d '{ "json": "data" }' -H 'Content-Type: application/json'
 
 Example:
 
