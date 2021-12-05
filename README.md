@@ -14,6 +14,10 @@ export FLASK_ENV=development
 flask run
 
 ## Making Requests to Endpoints Using Curl in Bash Terminal
-curl localhost:5000/encrypt -d '{"string data": "foobar", "boolean data": "True", "integer data": "178"}' -H 'Content-Type: application/json'
+In the form:
 
-curl localhost:5000/decrypt -d '{"boolean data": "gAAAAABhqTliMJ4HtqixayMqyNnHY9dM3fqr3xAbpMcxhUnR2XKxYmhp8xSuctzwCWxPvOnYBDYjT7nBpDpZ6hyehX8ycJXqOg==", "integer data": "gAAAAABhqTliwteCByXIvU_arxmkTysD9atWMK8F_olkZ-9pZPXxQaAm9WfJK8DiQB8tmiev1G6o4F567NUX_Hl5SqOKHFaK7g==", "string data": "gAAAAABhqTliZsPeSWuFNmRNCnI8X0pybUG_GVOXFLiyCCJBWOc1_ivbgEF8QyA9QHbZOwqVJYiRBgf7HMNk1fh-1PSQAheFMQ=="}' -H 'Content-Type: application/json'
+curl localhost:5000/endpoint-name -d '{ "json": "data" } -H 'Content-Type: application/json'
+
+Example:
+
+curl localhost:5000/encrypt -d '{"name": "Bob", "age": "17", "address": { "line 1": "14 Street", "line 2": "Town Name", "line 3": "County" }}' -H 'Content-Type: application/json'

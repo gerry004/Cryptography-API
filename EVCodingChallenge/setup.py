@@ -9,6 +9,6 @@ setup(
     zip_safe=False,
     install_requires=[
       'flask==2.0.1',
-      'cryptography'
+      'cryptography==36.0.0'
     ],
 )
