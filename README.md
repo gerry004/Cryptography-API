@@ -1,4 +1,4 @@
-## CryptographyAPI
+## Cryptography API
 ## Setting Up Python Virtual Environment
 python3 -m venv cryptography-api-env
 
