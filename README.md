@@ -1,13 +1,13 @@
 ## EV-Coding-Challenge
 ## Setting Up Python Virtual Environment
-python3 -m venv ev-coding-challenge-env
+python3 -m venv cryptography-api-env
 
-source ev-coding-challenge-env/bin/activate
+source cryptography-api-env/bin/activate
 
 ## How to Execute Program
 pip install -e .
 
-export FLASK_APP=EVCodingChallenge
+export FLASK_APP=CryptographyAPI
 
 export FLASK_ENV=development
 

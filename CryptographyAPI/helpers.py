@@ -3,16 +3,19 @@ from cryptography.fernet import Fernet
 from hashlib import sha256
 from flask import current_app
 
-def decrypt_json(data: dict, indicator: str) -> dict:
+def decrypt_json(data: dict) -> dict:
     fernet = Fernet(current_app.config['ENCRYPTION_KEY'])
 
     for key in data:
-        if str(data[key]).startswith(indicator) == True:
+        try:
             data[key] = fernet.decrypt(str(data[key]).encode()).decode()
-            try:
-                data[key] = convert_string_to_json(data[key])
-            except Exception as e:
-                print(e)
+        except Exception as e:
+            print('String could not be decrypted.', type(e), e)
+
+        try:
+            data[key] = convert_string_to_json(data[key])
+        except Exception as e:
+            print('String could not be converted to json.', type(e), e)
     
     return data
 

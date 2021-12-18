@@ -1,6 +1,6 @@
 import os
 from flask import Flask
-from EVCodingChallenge import endpoints
+from CryptographyAPI import endpoints
 from cryptography.fernet import Fernet
 
 def create_app():
